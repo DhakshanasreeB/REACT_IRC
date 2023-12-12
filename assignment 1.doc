@@ -1,0 +1,121 @@
+                                              ASSIGNMENT 1
+
+1)String Functions in JavaScript:
+
+i)length: Returns the length of a string.
+  let str = "Hello, World!";
+  console.log(str.length);
+ Output: 13
+
+ii)charAt(index): Returns the character at the specified index in a string.
+ let str = "Hello";
+ console.log(str.charAt(1));
+ Output: e
+
+iii)concat(str1, str2, ...): Combines two or more strings.
+ let str1 = "Hello";
+ let str2 = "World";
+ let result = str1.concat(", ", str2, "!");
+ console.log(result);
+ Output: Hello, World!
+
+iv)indexOf(substring, startIndex): Returns the index of the first occurrence of a substring, starting from the specified      index.
+let str = "Hello, World!";
+console.log(str.indexOf("World")); 
+ Output: 7
+
+
+2) Print the numbers from the increasing order using a for loop in java script.
+
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+        process.stdout.write(j + " ");
+    }
+    console.log();
+}
+OUTPUT:
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+
+EXPLANATION:
+ 
+ Outer Loop (for (let i = 1; i <= 5; i++)):
+
+The outer loop is responsible for iterating over the rows of the pattern.
+It starts with i equal to 1 and continues as long as i is less than or equal to 5.
+In each iteration, the value of i increases by 1.
+Inner Loop (for (let j = 1; j <= i; j++)):
+
+The inner loop is responsible for iterating over the columns within each row.
+It starts with j equal to 1 and continues as long as j is less than or equal to the current value of i.
+In each iteration, the value of j increases by 1.
+Print Numbers (process.stdout.write(j + " ");):
+
+Within the inner loop, the statement process.stdout.write(j + " "); prints the current value of j followed by a space.
+This prints the numbers in each row separated by spaces without moving to the next line.
+Move to the Next Line (console.log();):
+
+After completing the inner loop for a particular row (i), console.log(); is used to move to the next line.
+This ensures that the numbers for the next row will be printed on a new line.
+Repeat (for loops):
+
+The outer loop continues to the next iteration, and the process repeats until the outer loop condition is no longer true (when i exceeds 5).
+
+
+
+3) Write a code in javaScript  to find the perimeter of a trinagle.
+
+CODING:
+
+function calculateTrianglePerimeter(side1, side2, side3) {
+
+    if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+        return "Invalid input: All side lengths must be positive.";
+    }
+    let perimeter = side1 + side2 + side3;
+
+    return perimeter;
+}
+
+Example usage:
+let side1 = 3;
+let side2 = 4;
+let side3 = 5;
+
+let perimeter = calculateTrianglePerimeter(side1, side2, side3);
+console.log("Perimeter of the triangle:", perimeter);
+
+  
+
+EXPLANATION:
+ 
+The calculateTrianglePerimeter function takes three parameters (side1, side2, and side3) representing the lengths of the sides of a triangle.
+It checks whether the input sides are valid for a triangle, and if not, it returns an error message.
+It calculates the perimeter by adding the lengths of the three sides.
+The example usage section demonstrates how to use the function by providing specific side lengths, calling the function, and printing the result to the console.
+
+   
+4)Write a javaScript code to count the no. of vowels in a string.
+
+CODING:
+ 
+ function countVowels(inputString) {
+    let lowercaseString = inputString.toLowerCase();
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    let vowelCount = 0;
+    for (let char of lowercaseString) {
+        if (vowels.has(char)) {
+            vowelCount++;
+        }
+    }
+    return vowelCount;
+}
+let inputString = "Hello, World!";
+let result = countVowels(inputString);
+console.log("Number of vowels:", result);
+
+INPUT:           OUTPUT:
+dhakshana         3
